@@ -1,0 +1,6 @@
+.Checkout{
+    margin-top: 0;
+}
+.Checkout::before{
+    display: none; // I have removed ::before to delete bray background that is above the checkout component
+}

@@ -1,0 +1,64 @@
+.ProgressBarContainer{
+    min-height: 120px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: $default-secondary-light-color;
+}
+.ProgressBarHR{
+    position: relative;
+    height: 4px;
+    border-radius: 4px;
+    flex: 1 0 0;
+    overflow: auto;
+    background: $default-secondary-base-color;
+    animation: width-change 1s linear;
+}
+.ProgressBarHR.active{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 4px;
+    background: $default-primary-base-color;
+    border-radius: 4px;
+}
+.ProgressBarPoint{
+    margin: 0 3% 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .PointCircle.active{
+        background: $default-primary-base-color;
+        color: $white;
+    }
+    .PointCircle{
+        background: $default-secondary-base-color;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: bold;
+        color: $default-secondary-dark-color;
+    }
+    .PointTitle{
+        margin-top: 8px;
+        text-align: center;
+        color: $black;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+}
+@keyframes width-change {
+    0% { width:0% }
+    100% { width:100% }
+}
+
+
